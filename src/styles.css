@@ -81,6 +81,7 @@ h1 {
 }
 .split {
   column-count: 2;
+  font-weight: 100!important
 }
 
 ul,
@@ -132,7 +133,7 @@ li {
   position: fixed;
   z-index: 1;
   overflow-y: scroll;
-  /* padding: 40px 0; */
+  padding: 40px 0;
   /* background-color: rgb(248, 248, 248); */
 }
 
@@ -151,7 +152,7 @@ li {
 .open .card-content {
   height: auto;
   max-width: 1000px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   /* border: solid 2px var(--dark); */
   box-shadow: 2px 3px 20px rgb(202, 202, 202);
 }
@@ -169,8 +170,8 @@ li {
   top: 0;
   left: 0;
   overflow: hidden;
-  height: 420px;
-  width: 100vw;
+  height: 450px;
+  width: 100%;
 }
 
 .open .card-image-container,
@@ -191,6 +192,7 @@ li {
   background-color: black;
   padding: 10px 20px;
   text-decoration: none;
+  border-radius: 20px
 }
 .bk {
   background-color: #1c2935;
@@ -209,6 +211,7 @@ li {
   top: 15px;
   left: 15px;
   max-width: 300px;
+  font-size: 1.6rem
 }
 .techs {
   display: flex;
@@ -226,6 +229,21 @@ li {
   font-size: 0.8rem;
   margin-bottom: 30px
 }
+
+.demo{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 0;
+  flex-wrap: wrap
+}
+.demo p{
+  width: 50%;
+  padding: 30px;
+  border-bottom: 1px solid var(--light);
+  font-size: 1.5rem;
+}
+
 
 .open .title-container {
   top: 30px;
@@ -311,6 +329,22 @@ p {
   }
   .intro .big-title{
     font-size: 3rem
+  }
+  .title-container {
+    font-size: 1.5rem
+  }
+  .demo p{
+    width: 100%
+  }
+  .images img{
+    width: 100%
+  }
+  .techs p {
+    margin-right: 13px;
+    padding: 7px 11px
+  }
+  .content-container .split{
+    font-size: 16px
   }
 }
 

@@ -1,6 +1,6 @@
 export const items = [
   {
-    id: "v",
+    id: "1",
     category: "DEV",
     title: "MAPBOX EVENT MLN",
     pointOfInterest: 80,
@@ -10,22 +10,22 @@ export const items = [
     images: [""],
   },
   {
-    id: "jigento",
+    id: "2",
     category: "DEV",
     title: "JIGENTO",
     pointOfInterest: 120,
     backgroundColor: "#959684",
-    img: "packs.jpg",
-    tech: ["react", "framer", "es6"],
+    img: "packs-2.jpg",
+    tech: ["react", "framer"],
   },
   {
-    id: "a",
+    id: "3",
     category: "DEV",
     title: "COUNTER TV",
     pointOfInterest: 260,
     backgroundColor: "#5DBCD2",
     img: "tv.jpg",
-    tech: ["react", "mobx", "mapbox"],
+    tech: ["react", "mobx"],
   },
 ];
 

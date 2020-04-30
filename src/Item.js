@@ -23,7 +23,7 @@ export function Item({ id }) {
       <div className="card-content-container open">
         <motion.div className="card-content" layoutId={`card-container-${id}`}>
           <Link className="btn-close" to="/">
-            Close
+            X
           </Link>
           <motion.div
             className="card-image-container"
@@ -44,7 +44,11 @@ export function Item({ id }) {
             variants={container}
             transition={{ duration: 6.3, delay: 3 }}
           >
-            <div>
+            <div className="demo">
+              <p className="subtitle">DEMO</p>
+              <p className="subtitle">CODE</p>
+            </div>
+            <div style={{ marginTop: "30px" }}>
               <p className="subtitle">
                 Lorem ipsum odor amet, consectetuer adipiscing elit. Suspendisse
               </p>
@@ -57,9 +61,7 @@ export function Item({ id }) {
               <p className="split">
                 Lorem ipsum odor amet, consectetuer adipiscing elit. Suspendisse
                 potenti efficitur litora amet. Hendrerit curae in natoque
-                pulvinar mattis? At nibh diam urna ante. Mollis sed eros
-                euismod. Pulvinar lorem velit faucibus ultricies purus nisl
-                vivamus. Diam habitant netus erat quis habitasse.
+                pulvinar mattis?
               </p>
             </div>
             <motion.div
@@ -69,8 +71,6 @@ export function Item({ id }) {
               animate="visible"
             >
               <motion.div>
-                <motion.img src="ciga.png" variants={item} />
-                <motion.img src="ciga.png" variants={item} />
                 <motion.img src="ciga.png" variants={item} />
                 <motion.img src="ciga.png" variants={item} />
               </motion.div>
