@@ -6,7 +6,16 @@ import { items } from "./data";
 import { container, item } from "./const";
 
 export function Item({ id }) {
-  const { category, title, img, tech } = items.find((item) => item.id === id);
+  const {
+    category,
+    title,
+    img,
+    tech,
+    demo,
+    code,
+    subtitle,
+    description,
+  } = items.find((item) => item.id === id);
 
   return (
     <>
@@ -39,32 +48,39 @@ export function Item({ id }) {
             <span className="category">{category}</span>
             <h2>{title}</h2>
           </motion.div>
-          <motion.div
-            className="content-container"
-            variants={container}
-            transition={{ duration: 6.3, delay: 3 }}
-          >
+          <motion.div className="content-container" variants={container}>
             <div className="demo">
-              <p className="subtitle">DEMO</p>
-              <p className="subtitle">CODE</p>
+              {demo && (
+                <a
+                  href={demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="subtitle"
+                >
+                  DEMO
+                </a>
+              )}
+
+              <a
+                href={code}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="subtitle"
+              >
+                CODE
+              </a>
             </div>
             <div style={{ marginTop: "30px" }}>
-              <p className="subtitle">
-                Lorem ipsum odor amet, consectetuer adipiscing elit. Suspendisse
-              </p>
+              <p className="subtitle">{subtitle}</p>
               <div className="techs">
                 {tech.map((e, i) => (
                   <p key={i}>{e}</p>
                 ))}
               </div>
 
-              <p className="split">
-                Lorem ipsum odor amet, consectetuer adipiscing elit. Suspendisse
-                potenti efficitur litora amet. Hendrerit curae in natoque
-                pulvinar mattis?
-              </p>
+              <p className="split">{description}</p>
             </div>
-            <motion.div
+            {/* <motion.div
               className="images"
               variants={container}
               initial="hidden"
@@ -74,7 +90,7 @@ export function Item({ id }) {
                 <motion.img src="ciga.png" variants={item} />
                 <motion.img src="ciga.png" variants={item} />
               </motion.div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </motion.div>
       </div>

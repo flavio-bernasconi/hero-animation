@@ -18,14 +18,12 @@ export function Intro(props) {
               Flavio Bernasconi
             </motion.h1>
             <motion.h3 variants={item} className="subtitle">
-              junior frontend developer.
+              I'm a junior frontend developer.
             </motion.h3>
             <motion.p variants={item} className="split">
-              Lorem ipsum odor amet, consectetuer adipiscing elit. Suspendisse
-              potenti efficitur litora amet. Hendrerit curae in natoque pulvinar
-              mattis? At nibh diam urna ante. Mollis sed eros euismod. Pulvinar
-              lorem velit faucibus ultricies purus nisl vivamus. Diam habitant
-              netus erat quis habitasse.
+              It's been almost a year since a started to code. This are some
+              projects I used to train and improve my code. You can check all my
+              code on my github page.
             </motion.p>
           </motion.div>
         </motion.div>
