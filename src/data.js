@@ -5,8 +5,9 @@ export const items = [
     title: "MAPBOX EVENT MLN",
     pointOfInterest: 80,
     backgroundColor: "#814A0E",
-    img: "map.png",
+    img: "map.jpg",
     tech: ["react", "mobx", "mapbox"],
+    images: [""],
   },
   {
     id: "jigento",
@@ -14,7 +15,7 @@ export const items = [
     title: "JIGENTO",
     pointOfInterest: 120,
     backgroundColor: "#959684",
-    img: "ciga.png",
+    img: "packs.jpg",
     tech: ["react", "framer", "es6"],
   },
   {
@@ -23,7 +24,7 @@ export const items = [
     title: "COUNTER TV",
     pointOfInterest: 260,
     backgroundColor: "#5DBCD2",
-    img: "ciga.png",
+    img: "tv.jpg",
     tech: ["react", "mobx", "mapbox"],
   },
 ];

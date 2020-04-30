@@ -12,8 +12,8 @@ function Card({ id, title, category, theme, img }) {
             className="card-image-container"
             layoutId={`card-image-container-${id}`}
           >
-            {/* <img className="card-image" src={img} alt="" /> */}
-            <div className="card-image bk" />
+            <img className="card-image" src={img} alt="" />
+            {/* <div className="card-image bk" /> */}
           </motion.div>
           <motion.div
             className="title-container"

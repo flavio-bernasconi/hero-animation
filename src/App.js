@@ -26,7 +26,7 @@ function Store({ match }) {
 
 export default function App() {
   return (
-    <div>
+    <div className="full">
       <Router>
         <Route path={["/:id", "/"]} component={Store} />
       </Router>
