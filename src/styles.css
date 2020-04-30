@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -17,9 +18,7 @@ body {
 
 * {
   box-sizing: border-box;
-  font-family: ".SFNSText", "SFProText-Regular", "SFUIText-Regular", ".SFUIText",
-    Helvetica, Arial, sans-serif;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "Circular Std";
 }
 
 #root {
@@ -27,8 +26,8 @@ body {
   justify-content: center;
 }
 
-.full{
-  width:100%
+.full {
+  width: 100%;
 }
 
 .screen {
@@ -44,7 +43,6 @@ body {
 }
 
 h1 {
-  font-weight: bold;
   color: var(--dark);
   margin: 6px 0 12px;
 }
@@ -64,24 +62,27 @@ h1 {
 }
 .intro .big-title {
   font-size: 4rem;
+  font-weight: 900;
 }
 .subtitle {
   font-size: 2rem;
   margin: 0;
   margin-bottom: 30px;
   color: var(--light);
-  font-weight: 300;
+  font-weight: 500;
   line-height: 2.3rem;
 }
 .intro p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0;
-  color: rgb(184, 184, 184);
+  color: rgb(155, 155, 155);
   column-gap: 40px;
+  font-family: "Montserrat", sans-serif;
 }
 .split {
   column-count: 2;
-  font-weight: 100!important
+  font-weight: 200 !important;
+  font-family: "Montserrat", sans-serif;
 }
 
 ul,
@@ -188,11 +189,16 @@ li {
   top: 20px;
   z-index: 8;
   color: white;
-  font-size: 2rem;
+  font-size: 1.4rem;
   background-color: black;
-  padding: 10px 20px;
   text-decoration: none;
-  border-radius: 20px
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  box-shadow: 0px 0px 12px var(--dark);
 }
 .bk {
   background-color: #1c2935;
@@ -211,7 +217,7 @@ li {
   top: 15px;
   left: 15px;
   max-width: 300px;
-  font-size: 1.6rem
+  font-size: 1.6rem;
 }
 .techs {
   display: flex;
@@ -227,23 +233,36 @@ li {
   border-radius: 40px;
   color: white;
   font-size: 0.8rem;
-  margin-bottom: 30px
+  margin-bottom: 30px;
 }
 
-.demo{
+.demo {
   display: flex;
   justify-content: space-between;
   margin-top: 0;
   margin-bottom: 0;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
-.demo p{
+.demo a {
   width: 50%;
   padding: 30px;
   border-bottom: 1px solid var(--light);
   font-size: 1.5rem;
+  text-decoration: none;
+  transition: 0.4s;
 }
-
+.demo a:first-child {
+  background-color: var(--dark);
+  color: white;
+}
+.demo a:first-child:hover {
+  background-color: var(--light);
+  color: white;
+}
+.demo a:hover {
+  background-color: var(--light);
+  color: white;
+}
 
 .open .title-container {
   top: 30px;
@@ -307,7 +326,7 @@ p {
   }
 }
 @media only screen and (max-width: 600px) {
-  .split{
+  .split {
     column-count: 1;
   }
   .card {
@@ -327,24 +346,24 @@ p {
   .card-content-container.open {
     padding: 0;
   }
-  .intro .big-title{
-    font-size: 3rem
+  .intro .big-title {
+    font-size: 3rem;
   }
   .title-container {
-    font-size: 1.5rem
+    font-size: 1.5rem;
   }
-  .demo p{
-    width: 100%
+  .demo a {
+    width: 100%;
   }
-  .images img{
-    width: 100%
+  .images img {
+    width: 100%;
   }
   .techs p {
     margin-right: 13px;
-    padding: 7px 11px
+    padding: 7px 11px;
   }
-  .content-container .split{
-    font-size: 16px
+  .content-container .split {
+    font-size: 16px;
   }
 }
 
