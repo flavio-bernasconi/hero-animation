@@ -61,12 +61,13 @@ h1 {
 .intro .big-title {
   font-size: 4rem;
 }
-.intro .subtitle {
+.subtitle {
   font-size: 2rem;
   margin: 0;
   margin-bottom: 30px;
   color: var(--light);
   font-weight: 300;
+  line-height: 2.3rem;
 }
 .intro p {
   font-size: 1.2rem;
@@ -135,11 +136,12 @@ li {
   pointer-events: auto;
   position: relative;
   border-radius: 10px;
-  background: white;
   overflow: hidden;
   width: 100%;
   height: 100%;
   margin: 0 auto;
+  box-shadow: 2px 3px 10px var(--light);
+  background-color: white;
 }
 
 .open .card-content {
@@ -175,17 +177,49 @@ li {
   width: 500px;
   height: auto;
 }
+.btn-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 8;
+  color: white;
+  font-size: 2rem;
+  background-color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+}
 .bk {
   background-color: #1c2935;
   width: 100%;
   height: 100%;
 }
-
+.images {
+  display: flex;
+  flex-wrap: wrap;
+}
+.images img {
+  width: 50%;
+}
 .title-container {
   position: absolute;
   top: 15px;
   left: 15px;
   max-width: 300px;
+}
+.techs {
+  display: flex;
+  flex-wrap: wrap;
+}
+.techs p {
+  margin: 0;
+  margin-right: 30px;
+  text-transform: uppercase;
+  background-color: var(--dark);
+  padding: 7px 20px;
+  height: 40px;
+  border-radius: 40px;
+  color: white;
+  font-size: 0.8rem;
 }
 
 .open .title-container {
@@ -247,6 +281,40 @@ p {
   .card:nth-child(4n + 4) {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 /* 

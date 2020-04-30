@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 import { LoremIpsum } from "react-lorem-ipsum";
 import { Link } from "react-router-dom";
 import { items } from "./data";
+import { container, item } from "./const";
 
 export function Item({ id }) {
-  const { category, title } = items.find((item) => item.id === id);
+  const { category, title, img, tech } = items.find((item) => item.id === id);
 
   return (
     <>
@@ -21,15 +22,14 @@ export function Item({ id }) {
       </motion.div>
       <div className="card-content-container open">
         <motion.div className="card-content" layoutId={`card-container-${id}`}>
+          <Link className="btn-close" to="/">
+            Close
+          </Link>
           <motion.div
             className="card-image-container"
             layoutId={`card-image-container-${id}`}
           >
-            <img
-              className="card-image"
-              src={`https://source.unsplash.com/1600x900/?nature,water`}
-              alt=""
-            />
+            <img className="card-image" src={img} alt="" />
             {/* <div className="card-image bk" /> */}
           </motion.div>
           <motion.div
@@ -38,22 +38,43 @@ export function Item({ id }) {
           >
             <span className="category">{category}</span>
             <h2>{title}</h2>
-            <Link to="/">Close</Link>
           </motion.div>
-          <motion.div className="content-container" animate>
-            <p className="split">
-              Lorem ipsum odor amet, consectetuer adipiscing elit. Suspendisse
-              potenti efficitur litora amet. Hendrerit curae in natoque pulvinar
-              mattis? At nibh diam urna ante. Mollis sed eros euismod. Pulvinar
-              lorem velit faucibus ultricies purus nisl vivamus. Diam habitant
-              netus erat quis habitasse.
-            </p>
-            <img className="img-content" src={`ciga.png`} alt="" />
-            <LoremIpsum
-              p={3}
-              avgWordsPerSentence={6}
-              avgSentencesPerParagraph={4}
-            />
+          <motion.div
+            className="content-container"
+            variants={container}
+            transition={{ duration: 6.3, delay: 3 }}
+          >
+            <div>
+              <p className="subtitle">
+                Lorem ipsum odor amet, consectetuer adipiscing elit. Suspendisse
+              </p>
+              <div className="techs">
+                {tech.map((e, i) => (
+                  <p key={i}>{e}</p>
+                ))}
+              </div>
+
+              <p className="split">
+                Lorem ipsum odor amet, consectetuer adipiscing elit. Suspendisse
+                potenti efficitur litora amet. Hendrerit curae in natoque
+                pulvinar mattis? At nibh diam urna ante. Mollis sed eros
+                euismod. Pulvinar lorem velit faucibus ultricies purus nisl
+                vivamus. Diam habitant netus erat quis habitasse.
+              </p>
+            </div>
+            <motion.div
+              className="images"
+              variants={container}
+              initial="hidden"
+              animate="visible"
+            >
+              <motion.div>
+                <motion.img src="ciga.png" variants={item} />
+                <motion.img src="ciga.png" variants={item} />
+                <motion.img src="ciga.png" variants={item} />
+                <motion.img src="ciga.png" variants={item} />
+              </motion.div>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

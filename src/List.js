@@ -3,7 +3,7 @@ import { items } from "./data";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-function Card({ id, title, category, theme }) {
+function Card({ id, title, category, theme, img }) {
   return (
     <li className={`card ${theme}`}>
       <div className="card-content-container">
@@ -12,12 +12,8 @@ function Card({ id, title, category, theme }) {
             className="card-image-container"
             layoutId={`card-image-container-${id}`}
           >
-            <img
-              className="card-image"
-              src={`https://source.unsplash.com/1600x900/?night`}
-              alt=""
-            />
-            {/* <div className="card-image bk" /> */}
+            {/* <img className="card-image" src={img} alt="" /> */}
+            <div className="card-image bk" />
           </motion.div>
           <motion.div
             className="title-container"
@@ -36,9 +32,11 @@ function Card({ id, title, category, theme }) {
 export function List({ selectedId }) {
   return (
     <ul className="card-list">
-      {items.map((card) => (
-        <Card key={card.id} {...card} isSelected={card.id === selectedId} />
-      ))}
+      {items.map((card) => {
+        return (
+          <Card key={card.id} {...card} isSelected={card.id === selectedId} />
+        );
+      })}
     </ul>
   );
 }

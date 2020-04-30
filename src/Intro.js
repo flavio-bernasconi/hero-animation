@@ -13,12 +13,12 @@ export function Intro(props) {
           animate="visible"
         >
           <motion.div transition={{ duration: 1.3, delay: 0.1 }}>
-            <motion.p variants={item}>Hi there</motion.p>
+            {/* <motion.p variants={item}>Hi there</motion.p> */}
             <motion.h1 className="big-title" variants={item}>
-              I'm Flavio Bernasconi
+              Flavio Bernasconi
             </motion.h1>
             <motion.h3 variants={item} className="subtitle">
-              a junior frontend developer.
+              junior frontend developer.
             </motion.h3>
             <motion.p variants={item} className="split">
               Lorem ipsum odor amet, consectetuer adipiscing elit. Suspendisse
