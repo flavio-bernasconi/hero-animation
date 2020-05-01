@@ -6,10 +6,13 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Intro } from "./Intro";
 import About from "./About";
 import { Footer } from "./Footer";
+import { items } from "./data";
 
 function Store({ match }) {
   let { id } = match.params;
   const imageHasLoaded = true;
+
+  console.log(items);
 
   return (
     <AnimateSharedLayout type="crossfade">

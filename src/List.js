@@ -34,11 +34,11 @@ function Card({ id, title, category, theme, img }) {
 export function List({ selectedId }) {
   return (
     <ul className="card-list">
-      {items.map((card) => {
+      {/* {items.map((card) => {
         return (
           <Card key={card.id} {...card} isSelected={card.id === selectedId} />
         );
-      })}
+      })} */}
     </ul>
   );
 }

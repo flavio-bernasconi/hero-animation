@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { LoremIpsum } from "react-lorem-ipsum";
 import { Link } from "react-router-dom";
 import { items } from "./data";
 import { container } from "./const";
 import { DemoSection } from "./DemoSection";
 
 export function Item({ id }) {
+  console.log(items.find((item) => item.id === id));
+
   const {
     category,
     title,
