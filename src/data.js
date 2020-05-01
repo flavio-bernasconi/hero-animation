@@ -42,7 +42,7 @@ export const items = [
     title: "Bnb clone",
     img: "bnb.jpg",
     tech: ["laravel", "mysql", "php"],
-    code: "https://github.com/flavio-bernasconi/tv-time",
+    code: "https://github.com/flavio-bernasconi/BoolBnB",
     subtitle: "Clone Air Bnb",
     description:
       "This is the final project of the Boolean course, create an AirBnB clone using Laravel. This project was huge, we design the database first, build it with mysql and then start the interface using Laverl. We create a login/registration process for both seeker and owner of flats. The seekers can search flats , filter them, display information about it complete of geolocalization and also contact the owner. The owners, can do the same things plus upload flats.",
