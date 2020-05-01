@@ -21,7 +21,7 @@ export function Intro(props) {
               Junior frontend developer.
             </motion.h3>
             <motion.p variants={item} className="split">
-              This below are my lastest personal projects I used to train and
+              Check out my lastest personal projects that I used to train and
               improve my code. You can check all my code on my
               <a
                 href={"https://github.com/flavio-bernasconi"}

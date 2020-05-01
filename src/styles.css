@@ -53,7 +53,6 @@ h1 {
 
 .intro {
   min-height: 50vh;
-  max-height: 700px;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -335,6 +334,7 @@ p {
   display: flex;
   align-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .container-footer a,
 .container-footer p,
@@ -354,6 +354,7 @@ p {
   .card {
     flex: 0 0 50%;
     max-width: 50%;
+    margin-bottom: 20px;
   }
 
   .card:nth-child(4n + 1),
