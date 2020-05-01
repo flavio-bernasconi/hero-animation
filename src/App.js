@@ -5,6 +5,7 @@ import { List } from "./List";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Intro } from "./Intro";
 import About from "./About";
+import { Footer } from "./Footer";
 
 function Store({ match }) {
   let { id } = match.params;
@@ -20,6 +21,7 @@ function Store({ match }) {
         </AnimatePresence>
       </div>
       <About />
+      <Footer />
     </AnimateSharedLayout>
   );
 }

@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import { LoremIpsum } from "react-lorem-ipsum";
 import { Link } from "react-router-dom";
 import { items } from "./data";
-import { container, item } from "./const";
+import { container } from "./const";
+import { DemoSection } from "./DemoSection";
 
 export function Item({ id }) {
   const {
@@ -17,6 +18,8 @@ export function Item({ id }) {
     description,
   } = items.find((item) => item.id === id);
 
+  document.body.style.overflow = "hidden";
+
   return (
     <>
       <motion.div
@@ -24,7 +27,6 @@ export function Item({ id }) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2, delay: 0.1 }}
-        style={{ pointerEvents: "auto" }}
         className="overlay"
       >
         <Link to="/" />
@@ -49,27 +51,7 @@ export function Item({ id }) {
             <h2>{title}</h2>
           </motion.div>
           <motion.div className="content-container" variants={container}>
-            <div className="demo">
-              {demo && (
-                <a
-                  href={demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="subtitle"
-                >
-                  DEMO
-                </a>
-              )}
-
-              <a
-                href={code}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="subtitle"
-              >
-                CODE
-              </a>
-            </div>
+            <DemoSection code={code} demo={demo} />
             <div style={{ marginTop: "30px" }}>
               <p className="subtitle">{subtitle}</p>
               <div className="techs">
@@ -77,20 +59,8 @@ export function Item({ id }) {
                   <p key={i}>{e}</p>
                 ))}
               </div>
-
               <p className="split">{description}</p>
             </div>
-            {/* <motion.div
-              className="images"
-              variants={container}
-              initial="hidden"
-              animate="visible"
-            >
-              <motion.div>
-                <motion.img src="ciga.png" variants={item} />
-                <motion.img src="ciga.png" variants={item} />
-              </motion.div>
-            </motion.div> */}
           </motion.div>
         </motion.div>
       </div>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -19,6 +19,10 @@ body {
 * {
   box-sizing: border-box;
   font-family: "Circular Std";
+}
+a {
+  text-decoration: none;
+  color: var(--light);
 }
 
 #root {
@@ -75,14 +79,15 @@ h1 {
 .intro p {
   font-size: 1.1rem;
   margin: 0;
-  color: rgb(155, 155, 155);
   column-gap: 40px;
   font-family: "Montserrat", sans-serif;
 }
 .split {
+  color: var(--light);
   column-count: 2;
-  font-weight: 200 !important;
+  font-weight: 500 !important;
   font-family: "Montserrat", sans-serif;
+  line-height: 1.7em;
 }
 
 ul,
@@ -121,7 +126,8 @@ li {
 }
 
 .card-content-container {
-  width: 100%;
+  max-width: 1060px;
+  margin: auto;
   height: 100%;
   position: relative;
   display: block;
@@ -227,41 +233,45 @@ li {
   margin: 0;
   margin-right: 30px;
   text-transform: uppercase;
-  background-color: var(--dark);
-  padding: 7px 20px;
-  height: 40px;
+  background-color: var(--light);
+  padding: 1px 20px;
+  height: 30px;
   border-radius: 40px;
   color: white;
   font-size: 0.8rem;
   margin-bottom: 30px;
 }
+.content-container .subtitle {
+  color: var(--dark);
+}
 
 .demo {
   display: flex;
   justify-content: space-between;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 50px 0 40px 0;
   flex-wrap: wrap;
 }
-.demo a {
-  width: 50%;
-  padding: 30px;
-  border-bottom: 1px solid var(--light);
+.demo .btn-demo {
+  width: 30%;
+  padding: 10px 20px;
   font-size: 1.5rem;
   text-decoration: none;
   transition: 0.4s;
+  margin-bottom: 0;
 }
-.demo a:first-child {
+.demo .btn-demo:first-child {
+  padding-left: 0;
+}
+.demo .btn-demo span {
+  width: 30px;
+  margin-top: 8px;
+  height: 2px;
   background-color: var(--dark);
-  color: white;
+  display: block;
+  transition: 1s;
 }
-.demo a:first-child:hover {
-  background-color: var(--light);
-  color: white;
-}
-.demo a:hover {
-  background-color: var(--light);
-  color: white;
+.demo .btn-demo:hover span {
+  width: 100%;
 }
 
 .open .title-container {
@@ -302,7 +312,7 @@ h2 {
 }
 
 .content-container {
-  padding: 460px 35px 35px 35px;
+  padding: 460px 35px 85px 35px;
   width: 90%;
   margin: auto;
 }
@@ -311,6 +321,33 @@ p {
   color: #9d9ca1;
   font-size: 20px;
   line-height: 28px;
+}
+.footer {
+  min-height: 130px;
+  width: 100%;
+  background-color: var(--dark);
+}
+.container-footer {
+  max-width: 1000px;
+  color: white;
+  margin: auto;
+  padding: 40px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.container-footer a,
+.container-footer p,
+.container-footer h1 {
+  color: white;
+}
+.container-footer a,
+.container-footer p {
+  font-size: 16px;
+  font-weight: lighter;
+}
+.container-footer a {
+  margin: 0 30px;
 }
 
 @media only screen and (max-width: 800px) {

@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 function Card({ id, title, category, theme, img }) {
+  document.body.style.overflow = "auto";
+
   return (
     <li className={`card ${theme}`}>
       <div className="card-content-container">
