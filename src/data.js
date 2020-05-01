@@ -36,6 +36,17 @@ export const items = [
     description:
       "This was one of my first React application. This is a counter to understand how much time we spent watching tv show. I also tryed to visualize the results to learn more about D3 js but it's really experimental.",
   },
+  {
+    id: "4",
+    category: "DEV",
+    title: "Bnb clone",
+    img: "bnb.jpg",
+    tech: ["laravel", "mysql", "php"],
+    code: "https://github.com/flavio-bernasconi/tv-time",
+    subtitle: "Clone Air Bnb",
+    description:
+      "This is the final project of the Boolean course, create an AirBnB clone using Laravel. This project was huge, we design the database first, build it with mysql and then start the interface using Laverl. We create a login/registration process for both seeker and owner of flats. The seekers can search flats , filter them, display information about it complete of geolocalization and also contact the owner. The owners, can do the same things plus upload flats.",
+  },
 ];
 
 export const openSpring = { type: "spring", stiffness: 200, damping: 30 };
