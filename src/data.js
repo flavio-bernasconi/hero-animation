@@ -6,8 +6,8 @@ export const items = [
     img: "map.jpg",
     tech: ["react", "mobx", "mapbox"],
     images: [""],
-    demo: "https://jigento.netlify.app/",
-    code: "https://jigento.netlify.app/",
+    demo: "https://event-map-app-mln.netlify.app/",
+    code: "https://github.com/flavio-bernasconi/mapbox-react",
     subtitle: "Use Mapbox to display the main events in Milan.",
     description:
       "I used Ticketmaster API to get the latitude and longitude of the main venues in Milan. I displayed them on the map and used Mapbox to create a smooth change of location based on the user scroll.",
@@ -19,7 +19,7 @@ export const items = [
     img: "packs-2.jpg",
     tech: ["react", "framer"],
     demo: "https://jigento.netlify.app/",
-    code: "https://jigento.netlify.app/",
+    code: "https://github.com/flavio-bernasconi/jigen",
     subtitle: "A counter to find out how much you spend in cigarettes.",
     description:
       "It's simple just select which cigrette do you smoke, set how much you smoke a day and simply find out how much you spend during a year. I used this project mainly to try out the Framer animation library.",
@@ -30,8 +30,8 @@ export const items = [
     title: "COUNTER TV",
     img: "tv.jpg",
     tech: ["react", "mobx", "d3"],
-    demo: "https://jigento.netlify.app/",
-    code: "https://jigento.netlify.app/",
+    demo: "https://counter-tv.netlify.app/",
+    code: "https://github.com/flavio-bernasconi/tv-time",
     subtitle: "Counter time spent watching TV show",
     description:
       "This was one of my first React application. This is a counter to understand how much time we spent watching tv show. I also tryed to visualize the results to learn more about D3 js but it's really experimental.",
