@@ -398,7 +398,8 @@ p {
   }
   .techs p {
     margin-right: 13px;
-    padding: 0px 13px;
+    padding: 1px 13px;
+    font-size: 11px;
   }
   .content-container .split {
     font-size: 16px;
