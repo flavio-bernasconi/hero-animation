@@ -21,8 +21,8 @@ export function Intro(props) {
               Junior frontend developer.
             </motion.h3>
             <motion.p variants={item} className="split">
-              Check out my lastest personal projects that I used to train and
-              improve my code. You can check all my code on my
+              Check out the lastest projects I developed. You can find all my
+              codes on my
               <a
                 href={"https://github.com/flavio-bernasconi"}
                 target="_blank"
@@ -30,8 +30,8 @@ export function Intro(props) {
               >
                 <b> GitHub page</b>
               </a>
-              . I'm currently looking for a job where I can develop new skills
-              and improve my knowledge.
+              . I am currently seeking a challenging job to improve my coding
+              skills and use my knowledge in a creative way.
             </motion.p>
           </motion.div>
         </motion.div>
