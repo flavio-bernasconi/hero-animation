@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import { Item } from "./Item";
 import { List } from "./List";
@@ -7,20 +7,30 @@ import { Intro } from "./Intro";
 import About from "./About";
 import { Footer } from "./Footer";
 import { items } from "./data";
+import { fetchDataFromPrismic } from "./helpers";
 
 function Store({ match }) {
+  const [projects, setprojects] = useState([]);
   let { id } = match.params;
-  const imageHasLoaded = true;
 
-  console.log(items);
-
+  (async () => {
+    const results = await fetchDataFromPrismic();
+    results.sort(function (a, b) {
+      const x = a.data.order[0].text;
+      const y = b.data.order[0].text;
+      return x - y;
+    });
+    setprojects(results);
+  })();
   return (
     <AnimateSharedLayout type="crossfade">
       <Intro />
       <div className="container">
-        <List selectedId={id} />
+        <List selectedId={id} listProjects={projects} />
         <AnimatePresence>
-          {id && imageHasLoaded && <Item id={id} key="item" />}
+          {id && projects.length > 0 && (
+            <Item id={id} key="item" projects={projects} />
+          )}
         </AnimatePresence>
       </div>
       <About />

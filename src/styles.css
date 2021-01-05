@@ -40,7 +40,7 @@ a {
 }
 
 .container {
-  max-width: 990px;
+  max-width: 1200px;
   flex: 1 1 100%;
   padding: 45px 25px;
   margin: auto;
@@ -59,7 +59,7 @@ h1 {
   background-color: var(--secondary);
 }
 .intro-container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
   padding: 40px;
 }
@@ -105,15 +105,15 @@ li {
 .card {
   position: relative;
   padding: 25px;
-  height: 400px;
-  flex: 0 0 40%;
-  max-width: 40%;
+  height: 450px;
+  flex: 0 0 45%;
+  max-width: 45%;
 }
 
 .card:nth-child(4n + 1),
 .card:nth-child(4n + 4) {
-  flex: 0 0 60%;
-  max-width: 60%;
+  flex: 0 0 55%;
+  max-width: 55%;
 }
 
 .card:nth-child(odd) {
@@ -125,7 +125,7 @@ li {
 }
 
 .card-content-container {
-  max-width: 1060px;
+  max-width: 1000px;
   margin: auto;
   height: 100%;
   position: relative;
@@ -138,8 +138,8 @@ li {
   right: 0;
   position: fixed;
   z-index: 1;
-  overflow-y: scroll;
-  padding: 40px 0;
+  overflow-y: auto;
+  padding: 40px;
   /* background-color: rgb(248, 248, 248); */
 }
 
@@ -156,8 +156,8 @@ li {
 }
 
 .open .card-content {
-  height: auto;
-  max-width: 1000px;
+  height: 100%;
+  max-width: 1200px;
   /* overflow-y: scroll; */
   /* border: solid 2px var(--dark); */
   box-shadow: 2px 3px 20px rgb(202, 202, 202);
@@ -169,6 +169,12 @@ li {
   left: 0;
   right: 0;
   bottom: 0;
+}
+.card:hover,
+.card-list:hover,
+.card-open-link:hover,
+a:hover {
+  cursor: pointer !important;
 }
 
 .card-image-container {
@@ -247,7 +253,7 @@ li {
 .demo {
   display: flex;
   justify-content: space-between;
-  margin: 50px 0 40px 0;
+  margin: 20px 0;
   flex-wrap: wrap;
 }
 .demo .btn-demo {
@@ -270,7 +276,8 @@ li {
   transition: 1s;
 }
 .demo .btn-demo:hover span {
-  width: 100%;
+  width: 100px;
+  max-width: 100px;
 }
 
 .open .title-container {
@@ -327,7 +334,7 @@ p {
   background-color: var(--dark);
 }
 .container-footer {
-  max-width: 1000px;
+  max-width: 1200px;
   color: white;
   margin: auto;
   padding: 40px;

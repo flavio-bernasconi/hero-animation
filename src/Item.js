@@ -5,20 +5,9 @@ import { items } from "./data";
 import { container } from "./const";
 import { DemoSection } from "./DemoSection";
 
-export function Item({ id }) {
-  console.log(items.find((item) => item.id === id));
-
-  const {
-    category,
-    title,
-    img,
-    tech,
-    demo,
-    code,
-    subtitle,
-    description,
-  } = items.find((item) => item.id === id);
-
+export function Item({ id, projects }) {
+  const projectSelected = projects.find((project) => project.id === id);
+  console.log(projectSelected);
   document.body.style.overflow = "hidden";
 
   return (
@@ -41,26 +30,36 @@ export function Item({ id }) {
             className="card-image-container"
             layoutId={`card-image-container-${id}`}
           >
-            <img className="card-image" src={img} alt="" />
-            {/* <div className="card-image bk" /> */}
+            <img
+              className="card-image"
+              src={projectSelected.data.image.url}
+              alt=""
+            />
           </motion.div>
           <motion.div
             className="title-container"
             layoutId={`title-container-${id}`}
           >
-            <span className="category">{category}</span>
-            <h2>{title}</h2>
+            {/* <span className="category">{category}</span> */}
+            <h2>{projectSelected.data.name[0].text}</h2>
           </motion.div>
           <motion.div className="content-container" variants={container}>
-            <DemoSection code={code} demo={demo} />
+            <DemoSection
+              code={projectSelected.data.github.url}
+              demo={projectSelected.data.link.url}
+            />
             <div style={{ marginTop: "30px" }}>
-              <p className="subtitle">{subtitle}</p>
+              {/* <p className="subtitle">{subtitle}</p> */}
               <div className="techs">
-                {tech.map((e, i) => (
-                  <p key={i}>{e}</p>
-                ))}
+                {projectSelected.data.libraries[0].text
+                  .split(" - ")
+                  .map((e, i) => (
+                    <p key={i}>{e}</p>
+                  ))}
               </div>
-              <p className="split">{description}</p>
+              <p className="split">
+                {projectSelected.data.description[0].text}
+              </p>
             </div>
           </motion.div>
         </motion.div>
