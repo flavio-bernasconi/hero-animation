@@ -32,7 +32,7 @@ export function Item({ id, projects }) {
           >
             <img
               className="card-image"
-              src={projectSelected.data.image.url}
+              src={projectSelected.data?.image?.url}
               alt=""
             />
           </motion.div>

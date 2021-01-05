@@ -158,8 +158,8 @@ li {
 .open .card-content {
   height: 100%;
   max-width: 1200px;
-  /* overflow-y: scroll; */
-  /* border: solid 2px var(--dark); */
+  overflow: auto;
+  height: auto;
   box-shadow: 2px 3px 20px rgb(202, 202, 202);
 }
 
